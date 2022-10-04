@@ -1,11 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import axios from 'axios'
 
-import './assets/main.css'
+/* Import Style */
+import './assets/styles/style.scss'
 
 const app = createApp(App)
-
-app.use(router)
+app.config.unwrapInjectedRef = true
+app.use(router, axios)
 
 app.mount('#app')

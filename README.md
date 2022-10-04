@@ -1,14 +1,20 @@
-# streaming-website-educational
+# Replica of a Streaming Website
 
-This template should help get you started developing with Vue 3 in Vite.
+## Analysis
 
-## Recommended IDE Setup
+## Versions
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### 0.0: Setup and learning
 
-## Customize configuration
+#### 0.0.5: Implemented functional provide-inject
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+#### 0.0.4: Implemented functional $emit
+
+#### 0.0.3: Added basic components to practice
+
+#### 0.0.2: Added axios and Sass Loaders
+
+#### 0.0.1: Created Vite Project
 
 ## Project Setup
 
