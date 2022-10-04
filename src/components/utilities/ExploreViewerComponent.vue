@@ -4,31 +4,14 @@
 	</div>
 
 	<h3 class="section-title"> Trending </h3>
-	<ul class="card-container flex-center">
-		
-		<InteractiveCardComponent v-for="item in explore.trending" :key="item.id"
-			:card="item"
-			class="card-item"
-		/>
-	</ul>
+	<Slider_SwiperComponent :cardSlides="explore.trending" />
 
 	<h3 class="section-title"> Popular </h3>
-	<ul class="card-container flex-center">
-		
-		<InteractiveCardComponent v-for="item in explore.popular" :key="item.id"
-			:card="item"
-			class="card-item"
-		/>
-	</ul>
+	<Slider_SwiperComponent :cardSlides="explore.popular" />
 
 	<h3 class="section-title"> Top Rated </h3>
-	<ul class="card-container flex-center">
-		
-		<InteractiveCardComponent v-for="item in explore.topRated" :key="item.id"
-			:card="item"
-			class="card-item"
-		/>
-	</ul>
+	<Slider_SwiperComponent :cardSlides="explore.topRated" />
+
 </template>
 
 <script>
@@ -36,6 +19,8 @@ import { apiData } from '@/assets/data/apiData.js'
 import axios from 'axios';
 
 import InteractiveCardComponent from '@/components/utilities/InteractiveCardComponent.vue';
+import Slider_SplideComponent from './Slider_SplideComponent.vue';
+import Slider_SwiperComponent from './Slider_SwiperComponent.vue';
 
 export default {
 	props: {
@@ -49,13 +34,16 @@ export default {
 				popular: [],
 				trending: [],
 				topRated: [],
-			}
+			},
+
+			exploreKeys: ['trending', 'popular', 'topRated'],
+			sectionTitles: ['Trending', 'Popular', 'Top Rated'],
 		}
 	},
-	
+
 	computed: {
-		exploreKeys() {
-			return Object.keys(this.explore);
+		exploreContent() {
+			return this.explore;
 		}
 	},
 
@@ -99,15 +87,17 @@ export default {
 		}, 
 	},
 
-	created() {
+	mounted() {
 		this.exploreKeys.forEach(item => {
 			this.getExplorePageContent(item);
 		})
 	},
 
 	components: {
-		InteractiveCardComponent,
-	}
+    InteractiveCardComponent,
+    Slider_SplideComponent,
+    Slider_SwiperComponent
+}
 }
 </script>
 
@@ -115,46 +105,4 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/_variables.scss';
 
-.card-container {
-	// FLEX container
-	$r-gap: $_size-5;
-	$c-gap: $_size-3;
-	
-	row-gap: $r-gap;
-	column-gap: $c-gap;
-
-	align-items: flex-start;
-
-		
-	overflow-x: scroll;
-
-	.section-title {
-		min-width: 100%;
-		text-align: center;
-	}
-
-	// FLEX items
-	@mixin calcCardsInWindow($visibleCards) {
-		min-inline-size: calc((100% / $visibleCards - $c-gap) + (100px / $visibleCards)) ;
-	}
-	.card-item {
-		@include calcCardsInWindow(3);
-
-		@media only screen and (min-width: $sm-breakpoint) {
-		@include calcCardsInWindow(4);
-		}
-
-		@media only screen and (min-width: $md-breakpoint) {
-		@include calcCardsInWindow(5);
-		}
-
-		@media only screen and (min-width: $lg-breakpoint) {
-		@include calcCardsInWindow(6);
-		}
-
-		@media only screen and (min-width: $xl-breakpoint) {
-		@include calcCardsInWindow(8);
-		}
-	}
-}
 </style>

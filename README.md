@@ -6,6 +6,10 @@
 
 ### 0.5: Improvements
 
+#### 0.5.7: Implemented SwiperJS
+
+#### 0.5.6: Issues with no images loaded with SplideJs
+
 #### 0.5.5: Added Simple slider for contents
 
 #### 0.5.4: Dynamically created all explore sections

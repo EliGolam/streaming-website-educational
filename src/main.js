@@ -4,6 +4,7 @@ import App from './App.vue'
 /* MODULES */
 import router from './router'
 import axios from 'axios'
+import VueSplide from '@splidejs/vue-splide'
 
 /* FONTAWESOME */
 // Core
@@ -24,10 +25,12 @@ library.add(farStar, fasStar, faStarHalfStroke)
 /* Import Style */
 import './assets/styles/style.scss'
 
+/* APP */
 const app = createApp(App)
+
 app.config.unwrapInjectedRef = true
 
+app.use(router, axios, VueSplide)
 app.component('font-awesome-icon', FontAwesomeIcon)
-app.use(router, axios)
 
 app.mount('#app')

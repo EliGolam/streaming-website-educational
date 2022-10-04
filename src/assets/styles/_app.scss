@@ -11,7 +11,7 @@ $fs-default: $fs-4;
 $fw-default: $fw-medium;
 $f-line-height: 1.5;
 
-$default-font-settings: $fw-default $fs-default/$f-line-height $ff-default;
+$default-font-settings: $fw-default $fs-default $ff-default;
 
 #app {
     font: $default-font-settings;
