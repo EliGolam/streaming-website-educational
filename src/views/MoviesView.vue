@@ -2,11 +2,11 @@
   <h1>Movies</h1>
   <p>Movie Content goes here</p>
 
-  <ContentViewerComponent />
+  <ContentViewerComponent :format="'movies'"/>
 </template>
 
 <script>
-import ContentViewerComponent from '@/components/utilities/ContentViewerComponent.vue';
+import ContentViewerComponent from '@/components/ContentViewerComponent.vue';
 
 export default {
   components: { ContentViewerComponent }

@@ -4,6 +4,12 @@
 
 ## Versions
 
+### 0.1: Milestone 1
+
+#### 0.1.1: Implemented Card component for each movie
+
+#### 0.1.0: Correctly displayed movies on screen from API
+
 ### 0.0: Setup and learning
 
 #### 0.0.11: Implemented reactive search with provide+inject and axios in ContentViewerComponent
