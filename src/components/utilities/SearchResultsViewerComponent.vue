@@ -3,7 +3,7 @@
 		SEARCH RESULTS
 	</div>
 
-	<ul class="card-container">
+	<ul class="card-container flex-center">
 		<InteractiveCardComponent v-for="item in results" :key="item.id"
 			:card="item"
 			class="card-item"
@@ -36,7 +36,6 @@ import InteractiveCardComponent from './InteractiveCardComponent.vue';
 	row-gap: $r-gap;
 	column-gap: $c-gap;
 
-	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
 	  

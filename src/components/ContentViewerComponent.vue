@@ -3,8 +3,13 @@
 		<p v-show="activeSearch">Results Found for: {{ newSearchQuery }}</p>
 	</div>
 
-	<ExploreViewerComponent v-if="!activeSearch" />
-	<SearchResultsViewerComponent v-if="activeSearch" :results="contentArray"/>
+    <div class="explore-page" v-show="!activeSearch" >
+	    <ExploreViewerComponent />
+    </div>
+
+    <div class="search-page" v-show="activeSearch">
+	    <SearchResultsViewerComponent :results="contentArray"/>
+    </div>
 </template>
 
 <script>

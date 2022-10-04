@@ -6,6 +6,10 @@
 
 ### 0.4: MileStone 4
 
+#### 0.4.5: Fixed issue with v-show not working properly
+
+* V-show was not working when applied to the component directly
+
 #### 0.4.4: Added hover effect on cards
 
 #### 0.4.3: Fixed responsive card size

@@ -130,6 +130,8 @@ li {
 	border-radius: $_size-3;
 	overflow: hidden;
 
+	background-color: rgba($clr-primary-red, .5);
+
 	.card-info {
 		// Position
 		position: absolute;
