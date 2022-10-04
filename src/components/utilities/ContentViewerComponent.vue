@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p v-show="activeSearch">Results Found for: {{ searchQuery }}</p>
+		<p v-show="activeSearch">Results Found for: {{ newSearchQuery }}</p>
 	</div>
 </template>
 
@@ -9,10 +9,12 @@ import { apiData } from '@/assets/data/apiData.js'
 import axios from 'axios';
 
 export default {
+	props: {
+		format: String,
+	},
 	data() {
 		return {
 			tmdbAPI: apiData.TMDB, // Proxy Handler
-
 			activeSearch: false,
 		}
 	},
@@ -25,13 +27,41 @@ export default {
 	},
 
 	computed: {
-		searchQuery() {
+		newSearchQuery() {
 			console.log("New Search", this.searchText);
 
 			this.activeSearch = this.searchText ? true : false;
 
+			if(this.activeSearch) {
+				console.log("SEARCHING...");
+				this.search(this.searchText);
+			}
+
 			return this.searchText;
-		}
+		},
+
+	},
+
+	methods: {
+		search(query) {
+			axios
+				.get(this.getQuery(query))
+				.then(response => {
+					console.log(response);
+				})
+				.catch(error => {
+					console.warn("Error Found while searching:", error);
+				})
+		},
+
+		getQuery(query) {
+			const {base_url, search_query, search_movie, search_tv} = this.tmdbAPI;
+
+			const key = import.meta.env.PR_APIKEY;
+			const search = this.format === 'movies' ? search_movie : search_tv;
+
+			return base_url + search + key + search_query + query.toLowerCase();
+		},
 	},
 
 	mounted() {

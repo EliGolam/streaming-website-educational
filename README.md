@@ -6,6 +6,8 @@
 
 ### 0.0: Setup and learning
 
+#### 0.0.11: Implemented reactive search with provide+inject and axios in ContentViewerComponent
+
 #### 0.0.10: Implemented variable that checks when search is active
 
 #### 0.0.9: Created Computed value that triggers whenever a new searchText is injected
