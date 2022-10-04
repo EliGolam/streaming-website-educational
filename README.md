@@ -6,6 +6,8 @@
 
 ### 0.5: Improvements
 
+#### 0.5.5: Added Simple slider for contents
+
 #### 0.5.4: Dynamically created all explore sections
 
 #### 0.5.3: Created 3 arrays for popular, trending and topRated
