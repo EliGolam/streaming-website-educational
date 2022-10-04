@@ -2,7 +2,7 @@
     <h1>TV Shows</h1>
     <p>Show Content goes here</p>
 
-    <ContentViewerComponent :format="'tvshows'" />
+    <ContentViewerComponent :format="'tv'" />
   </template>
   
   <script>

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import InteractiveCardComponent from './InteractiveCardComponent.vue';
+import InteractiveCardComponent from '@/components/utilities/InteractiveCardComponent.vue';
 	export default {
 
     props: {

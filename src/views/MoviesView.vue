@@ -2,7 +2,7 @@
   <h1>Movies</h1>
   <p>Movie Content goes here</p>
 
-  <ContentViewerComponent :format="'movies'"/>
+  <ContentViewerComponent :format="'movie'"/>
 </template>
 
 <script>

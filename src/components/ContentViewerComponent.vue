@@ -4,7 +4,7 @@
 	</div>
 
     <div class="explore-page" v-show="!activeSearch" >
-	    <ExploreViewerComponent />
+	    <ExploreViewerComponent :format="format" />
     </div>
 
     <div class="search-page" v-show="activeSearch">
@@ -59,12 +59,13 @@ export default {
                 console.warn("Error Found while searching:", error);
             });
         },
+
         getQuery(query) {
-            const { base_url, search_query, search_movie, search_tv } = this.tmdbAPI;
+            const { base_url, search_query, search } = this.tmdbAPI;
             const key = import.meta.env.PR_APIKEY;
-            const search = this.format === "movies" ? search_movie : search_tv;
-            return base_url + search + key + search_query + query.toLowerCase();
+            return base_url + search + this.format + '?' + key + search_query + query.toLowerCase();
         },
+
         processData({ status, data }) {
             if (status !== 200)
                 return; // Guard Statement

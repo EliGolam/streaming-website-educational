@@ -4,6 +4,16 @@
 
 ## Versions
 
+### 0.5: Improvements
+
+#### 0.5.4: Dynamically created all explore sections
+
+#### 0.5.3: Created 3 arrays for popular, trending and topRated
+
+#### 0.5.2: Adjusted apiData to be more scalable
+
+#### 0.5.1: Added Explore page
+
 ### 0.4: MileStone 4
 
 #### 0.4.5: Fixed issue with v-show not working properly
