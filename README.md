@@ -4,6 +4,49 @@
 
 ## Versions
 
+### 0.3: MileStone 3
+
+Add Movie Cover and Stars (rating)
+
+#### 0.3.12: Caught image not found error
+
+* (TODO) Need to implement fix with alternative images
+
+#### 0.3.11: Implemented InteractiveCardComponent
+
+#### 0.3.10: Added additional subcomponents for better scalability
+
+* Added InteractiveCardComponent for each movie/tv series
+* Added a rating system for each item
+
+#### 0.3.9: Changed some variable names for better readability
+
+#### 0.3.8: Added TOTAL_STARS constant for easy changes
+
+* TOTAL_STARS in data allows to easily switch between 5 and 10 stars by simply modifying one attribute
+
+#### 0.3.7: Added empty stars
+
+#### 0.3.6: Added full and halfStars
+
+#### 0.3.5: Created getStars function to turn rating into stars
+
+#### 0.3.4: Created getRating function to turn the string into proper rating format
+
+#### 0.3.3: Added Font Awesome Stars (full, empty and half)
+
+#### 0.3.2: Created getPosterSrc to retrieve poster image
+
+#### 0.3.1: Added TMDB_IMG_API to create path
+
+### 0.2: Milestone 2
+
+Dynamically add language flag based on original language
+
+#### 0.2.2: Added getFlagSrc function to retrieve flag image from API
+
+#### 0.2.1: Added FLAG_API with proper endpoint
+
 ### 0.1: Milestone 1
 
 #### 0.1.1: Implemented Card component for each movie

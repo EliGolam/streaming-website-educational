@@ -6,8 +6,8 @@
         <div class="card-info">    
             <p>{{ cardVotes }}</p>
 
-            <!-- <StarRatingComponent :rating="cardRating" :maxStars="TOTAL_STARS" /> 
-            <LanguageFlagComponent :language="card.original_language" /> -->
+            <StarRatingComponent :rating="cardRating" :maxStars="TOTAL_STARS" /> 
+            <LanguageFlagComponent :language="card.original_language" />
         </div>
 
         <img class="poster" :src="posterSrc" alt="Poster" @error="imageNotFoundError($event)" />    
@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import StarRatingComponent from '@/components/utilities/StarRatingComponent.vue';
+import LanguageFlagComponent from '@/components/utilities/LanguageFlagComponent.vue';
+
 export default {
 	name: "InteractiveCard",
     props: {
@@ -100,6 +103,11 @@ export default {
 					console.warn("Image not found: ", event);
 			}
     },
+
+		components: {
+			StarRatingComponent,
+			LanguageFlagComponent
+		}
 }
 </script>
 
