@@ -1,14 +1,14 @@
 <template>
 	<div>
-		<p>Injection: {{ message }}</p>
+		<p>Injection: {{ searchQuery }}</p>
 	</div>
 </template>
 
 <script>
 export default {
 	inject: {
-		message: {
-			from: 'message',
+		searchQuery: {
+			from: 'search',
 			default: '',
 		}
 	}

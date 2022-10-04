@@ -6,6 +6,14 @@
 
 ### 0.0: Setup and learning
 
+#### 0.0.6: Implemented Reactive Provide Injection
+
+This part made me incredibly proud. A full Reactive Provide-Inject isn't natively supported as of the time of this project, but following the documentation on the official website I created a reactive Provide Inject method.
+
+* Added ```app.config.unwrapInjectedRef = true``` to main.js
+* Added ```import { computed } from 'vue';``` to App.vue
+* Wrote the injection method like this ```message: computed(() => `This is a Test for Provide-Inject ${this.search}`),``` in App.vue
+
 #### 0.0.5: Implemented functional provide-inject
 
 #### 0.0.4: Implemented functional $emit

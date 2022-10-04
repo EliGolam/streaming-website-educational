@@ -5,7 +5,7 @@
 		<p>Project for Boolean S.r.l.</p>
 	</section>
 
-	<Header />
+	<Header @search="provideNewSearch" />
 
 	<nav>
 		<RouterLink to="/">Home</RouterLink>
@@ -39,13 +39,20 @@ export default {
 				}
 			],
 
-			message: "This is a Test for Provide-Inject"
+			search: ""
 		}
 	},
 
 	provide() {
 		return {
-			message: computed(() => this.message),
+			search: computed(() => `This is a Test for Provide-Inject ${this.search}`),
+		}
+	},
+
+	methods: {
+		provideNewSearch(searchText) {
+			if (this.search === searchText) return;
+			this.search = searchText;
 		}
 	},
 
