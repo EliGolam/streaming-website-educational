@@ -6,6 +6,11 @@
 
 ### 0.0: Setup and learning
 
+#### 0.0.7: Added env and Api data
+
+* Created an .env folder and added a custom envPrifix inside vite.config.js
+* Added the API data to apiData.js
+
 #### 0.0.6: Implemented Reactive Provide Injection
 
 This part made me incredibly proud. A full Reactive Provide-Inject isn't natively supported as of the time of this project, but following the documentation on the official website I created a reactive Provide Inject method.
