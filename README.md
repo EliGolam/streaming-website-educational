@@ -6,6 +6,12 @@
 
 ### 0.0: Setup and learning
 
+#### 0.0.10: Implemented variable that checks when search is active
+
+#### 0.0.9: Created Computed value that triggers whenever a new searchText is injected
+
+#### 0.0.8: Tested working Axios
+
 #### 0.0.7: Added env and Api data
 
 * Created an .env folder and added a custom envPrifix inside vite.config.js

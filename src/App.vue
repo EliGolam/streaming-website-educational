@@ -45,8 +45,7 @@ export default {
 
 	provide() {
 		return {
-			search: computed(() => `This is a Test for Provide-Inject ${this.search}`),
-			
+			search: computed(() => this.search),
 		}
 	},
 
