@@ -1,5 +1,8 @@
 <template>
-  <img :src="flagSrc" alt="" @error="flagNotFoundError($event)" />
+	<div class="language flex-center">
+		<p>Original Language:</p>
+		<img :src="flagSrc" alt="" @error="flagNotFoundError($event)" />
+	</div>
 </template>
 
 <script>
@@ -51,6 +54,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.language {
+	gap: 1rem;
+}
+
 img {
   width: 20px;
 }

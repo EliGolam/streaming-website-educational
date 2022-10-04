@@ -1,12 +1,13 @@
 <template>
-  <li class="card">
+  <li class="item flex nav-item">
     <h3 class="cardTitle">TITLE: {{ cardTitle }}</h3>
 
-    <div class="card-content">
-        <div class="card-info">    
-            <p>{{ cardVotes }}</p>
-
-            <StarRatingComponent :rating="cardRating" :maxStars="TOTAL_STARS" /> 
+    <div class="card">
+        <div class="card-info flex">    
+            <div class="card-rating">
+							<StarRatingComponent :rating="cardRating" :maxStars="TOTAL_STARS" /> 
+							<p>{{ cardVotes }}</p>
+						</div>
             <LanguageFlagComponent :language="card.original_language" />
         </div>
 
@@ -112,5 +113,65 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/_variables.scss';
 
+li {
+	// FLEX container
+	flex-direction: column-reverse;
+}
+
+.card {
+	// POSITION lock for card-info
+	position: relative;
+
+	// Shape and Size
+	width: 100%;
+	aspect-ratio: 1 / 1.5;
+	border-radius: $_size-3;
+	overflow: hidden;
+
+	.card-info {
+		// Position
+		position: absolute;
+
+		// Transitions
+		transition: opacity 300ms ease-out;
+
+		// Content
+		width: 100%;
+		height: 100%;
+		padding: $_size-5 $_size-2;
+		background: linear-gradient(
+			rgba($clr-dark-blue, .2),
+			rgba($clr-dark-blue, .4) 15%,
+			rgba($clr-dark-blue, .7) 70%,
+    	rgba($clr-primary-dark, 1)
+		);
+
+		opacity: 0;
+
+		// FLEX container
+		flex-direction: column;
+		justify-content: flex-end;
+
+		.card-rating {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+		}
+	}
+
+	.poster {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&:hover {
+		.card-info {
+			opacity: 1;
+		}
+	}
+}
 </style>

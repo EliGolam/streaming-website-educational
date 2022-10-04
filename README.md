@@ -4,6 +4,16 @@
 
 ## Versions
 
+### 0.4: MileStone 4
+
+#### 0.4.4: Added hover effect on cards
+
+#### 0.4.3: Fixed responsive card size
+
+#### 0.4.2: Added styling to cards
+
+#### 0.4.1: Added basic styling to the whole app
+
 ### 0.3: MileStone 3
 
 Add Movie Cover and Stars (rating)
