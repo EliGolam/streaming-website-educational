@@ -20,7 +20,16 @@ import { faStarHalfStroke } from '@fortawesome/free-regular-svg-icons'
 // Add Icons to Library
 library.add(farStar, fasStar, faStarHalfStroke)
 
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
+const vuetify = createVuetify({
+  components,
+  directives,
+});
 
 /* Import Style */
 import './assets/styles/style.scss'
@@ -31,6 +40,7 @@ const app = createApp(App)
 app.config.unwrapInjectedRef = true
 
 app.use(router, axios, VueSplide)
+app.use(vuetify)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')
